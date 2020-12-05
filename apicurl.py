@@ -25,6 +25,7 @@ def yorn(question, url):
     if reply[0] == 'y':
         try:
             r = requests.get(url)
+            print(r.content)
             r.raise_for_status()
         except requests.exceptions.HTTPError as err:
             raise SystemExit(err)
