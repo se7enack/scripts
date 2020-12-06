@@ -182,7 +182,7 @@ tzoffsetnopre = tzoffsetnocolon[:2] + ':' + tzoffsetnocolon[2:]
 tzoffset = prefix + tzoffsetnopre
 url = "https://" + server + ".getburke.com/api/v1/" + str(value1) + "/" + str(
     value2) + "?apikey=" + \
-      apikey + "&start=" + startdate + "T00:00:00.000" + str(tzoffset) + "&end=" + enddate + "T00:00:00.000" + str(tzoffset)
+      apikey + "&start=" + startdate + "T00:00:00.000" + str(tzoffset) + "&end=" + enddate + "T23:59:59.999" + str(tzoffset)
 
 print("\n" + url)
 time.sleep(1)
