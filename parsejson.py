@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+# Stephen Burke 2020-Dec-8
+
 import json
 from pprint import pprint
 
@@ -35,19 +39,19 @@ data = json.loads(payload1)
 
 pprint(data)
 
-print(data['people'])
-
-for person in data['people']:
-    print(person['name'])
+print(data['people'], "\n")
 
 
 for person in data['people']:
     del person['id']
 new_str = json.dumps(data, indent=2, sort_keys=True)
-print(new_str)
+print(new_str, "\n")
 
 data2 = json.loads(payload2)
 
 for state in data2['states']:
-    print(state['New Hampshire'])
+    print(state['New Hampshire'], "\n")
+
+for person in data['people']:
+    print(person['name'], "is a",  person['title'], "\n")
     
