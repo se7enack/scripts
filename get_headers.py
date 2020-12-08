@@ -1,4 +1,4 @@
-#!/Users/user/miniconda/bin/python
+#!/usr/bin/env python3
 
 # Stephen Burke 2020-Dec-7
 
