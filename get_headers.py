@@ -3,13 +3,17 @@
 # Stephen Burke 2020-Dec-7
 
 import requests
+from pprint import pprint
+
+url = str(input('\nEnter a url (please specify with http or https):  ')).lower()
 
 try:
-    url = str(input('Enter a url (please specify with http or https):  ')).lower()
-    response = requests.get(url)
-    print("\n", url, "\n")
-    print(response, "\n")
-    print(response.headers, "\n")
+	response = requests.get(url)
+	r = str(response.headers)
+	fixed = r.replace("\'", "\"")
+	print("\n", response, "\n")
+	pprint(fixed)
+	print("\n")
 except:
-    print("Error")
+    print("\nError: Well that's awkward\n")
    
