@@ -60,8 +60,8 @@ for person in data['people']:
 #     data3 = json.load(f)
 #     print(data3)
 
+
 with urllib.request.urlopen("https://api.weather.gov/gridpoints/OKX/33,37/forecast") as url:
     data4 = json.loads(url.read().decode())
-    new_str4 = json.dumps(data4, indent=2, sort_keys=True)
+    new_str4 = json.dumps(data4['properties']['periods'], indent=2, sort_keys=True)
     print(new_str4)
-         
