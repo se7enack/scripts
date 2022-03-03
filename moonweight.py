@@ -6,7 +6,7 @@ def moon(x):
 	nMoonWeight = "{:.2f}".format(nMoonWeightLong)
 	print("\nYour weight on the moon would be", nMoonWeight, "pounds.\n")
 
-sWeight=input("What is your weight? \n")
+sWeight=input("\nWhat is your weight?\n")
 try:
 	val = int(sWeight)
 except ValueError:
